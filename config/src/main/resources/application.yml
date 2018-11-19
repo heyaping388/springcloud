@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/xhe2016/config-repo
+          username: 774630093@qq.com
+          password: hypgood2012
+          basedir: D:/springcloud/config-repo
+  rabbitmq:
+    host: 192.168.138.134
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: springcloud
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8082
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
