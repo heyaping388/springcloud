@@ -12,11 +12,11 @@ import org.springframework.stereotype.Component;
  */
 @Slf4j
 @Component
-@EnableBinding(StreamClient.class)
+@EnableBinding(value = {StreamClient.class})
 public class StreamReceiver {
 
-    @StreamListener(StreamClient.INPUT)
-    public void process(Object message){
+    @StreamListener(StreamClient.OUTPUT)
+    public void process(String message){
         log.info("message:{}",message);
     }
 }
